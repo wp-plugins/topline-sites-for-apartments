@@ -24,7 +24,18 @@
  * Text Domain:       topline-plugin
  * Domain Path:       /languages
  */
+if (version_compare(PHP_VERSION, '5.4.0', '<')) {
 
+	add_action('admin_notices', function() {
+
+	echo "	<p class='update-nag'>
+				TopLine Sites is made for WordPress installations running <strong>PHP 5.4.0</strong> or greater. You are currently running: <strong>". PHP_VERSION ."</strong>.
+			</p>";
+
+	});
+	die;
+
+}
 
 // For composer dependencies
 require 'vendor/autoload.php';
