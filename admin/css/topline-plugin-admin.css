@@ -1,0 +1,504 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/**
+ * All of the CSS for your dashboard-specific functionality should be
+ * included in this file.
+ */
+html {
+  -webkit-tap-highlight-color: transparent; }
+
+.topline-form-error {
+  color: red;
+  margin-top: 0; }
+
+.settings_page_topline-plugin .clearfix:before, .settings_page_topline-plugin .clearfix:after,
+.settings_page_topline-plugin .container:before, .settings_page_topline-plugin .container:after,
+.settings_page_topline-plugin .container-fluid:before, .settings_page_topline-plugin .container-fluid:after,
+.settings_page_topline-plugin .row:before, .settings_page_topline-plugin .row:after,
+.settings_page_topline-plugin .form-horizontal .form-group:before, .settings_page_topline-plugin .form-horizontal .form-group:after,
+.settings_page_topline-plugin .btn-toolbar:before, .settings_page_topline-plugin .btn-toolbar:after,
+.settings_page_topline-plugin .btn-group-vertical > .btn-group:before, .settings_page_topline-plugin .btn-group-vertical > .btn-group:after,
+.settings_page_topline-plugin .nav:before, .nav:after, .settings_page_topline-plugin .navbar:before,
+.settings_page_topline-plugin .navbar:after, .settings_page_topline-plugin .navbar-header:before,
+.settings_page_topline-plugin .navbar-header:after, .settings_page_topline-plugin .navbar-collapse:before,
+.settings_page_topline-plugin .navbar-collapse:after, .settings_page_topline-plugin .pager:before, .settings_page_topline-plugin .pager:after,
+.settings_page_topline-plugin .panel-body:before, .settings_page_topline-plugin .panel-body:after, .settings_page_topline-plugin .modal-footer:before,
+.settings_page_topline-plugin .modal-footer:after {
+  content: " ";
+  display: table; }
+
+.settings_page_topline-plugin .clearfix:after, .settings_page_topline-plugin .container:after,
+.settings_page_topline-plugin .container-fluid:after, .settings_page_topline-plugin .row:after,
+.settings_page_topline-plugin .form-horizontal .form-group:after, .settings_page_topline-plugin .btn-toolbar:after, .settings_page_topline-plugin .btn-group-vertical > .btn-group:after,
+.settings_page_topline-plugin .nav:after, .navbar:after, .settings_page_topline-plugin .navbar-header:after, .settings_page_topline-plugin .navbar-collapse:after,
+.settings_page_topline-plugin .pager:after, .settings_page_topline-plugin .panel-body:after,
+.settings_page_topline-plugin .modal-footer:after {
+  clear: both; }
+
+.settings_page_topline-plugin :before, .settings_page_topline-plugin :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.settings_page_topline-plugin .open a {
+  outline: 0;
+  text-decoration: none; }
+
+.settings_page_topline-plugin .dropdown-menu > li > a:hover, .settings_page_topline-plugin .dropdown-menu > li > a:focus {
+  color: #FFF;
+  background-color: #aaa; }
+
+.settings_page_topline-plugin .navbar-nav .navbar-brand:hover, .settings_page_topline-plugin .navbar-toggle:hover,
+.settings_page_topline-plugin .navbar-nav > .open > a, .settings_page_topline-plugin .navbar-nav > .open > a:hover,
+.settings_page_topline-plugin .navbar-nav > .open > a:focus, .settings_page_topline-plugin .navbar-nav > li > a:hover {
+  background-color: #444; }
+
+.settings_page_topline-plugin .disabled {
+  cursor: not-allowed; }
+
+.settings_page_topline-plugin
+.settings_page_topline-plugin
+.settings_page_topline-plugin
+.settings_page_topline-plugin
+h1 .topline-edit-link {
+  font-size: 0.8em; }
+
+.topline-edit-link, .topline-edit-link:hover, .floorplan h3 a {
+  color: #D9534F;
+  font-weight: bold;
+  text-decoration: none; }
+
+.topline-edit-link:hover, .floorplan h3 a:hover {
+  color: #333; }
+
+.floorplan .topline-edit-container {
+  position: absolute;
+  top: 0.35em;
+  width: 100%;
+  display: block; }
+
+.floorplan .topline-edit-link {
+  float: right;
+  margin-right: 2em;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0.2em; }
+
+.settings_page_topline-plugin .subview-icons {
+  font-size: 0.8em; }
+
+.settings_page_topline-plugin .subview-icons a {
+  color: #333; }
+
+.settings_page_topline-plugin .subview-icons .active {
+  color: #00A8C4; }
+
+@media screen and (max-width: 782px) {
+  .settings_page_topline-plugin .topline-body.with-side, .settings_page_topline-plugin .topline-side {
+    width: auto;
+    float: none;
+    margin-bottom: 2.5em; } }
+/**
+ * All of the CSS for your dashboard-specific functionality should be
+ * included in this file.
+ */
+html {
+  -webkit-tap-highlight-color: transparent; }
+
+.settings_page_topline-plugin .topline-body, .settings_page_topline-plugin .topline-side {
+  clear: both;
+  overflow: hidden;
+  max-width: 95%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+.settings_page_topline-plugin .topline-body.with-side {
+  width: 55%;
+  margin-right: 5%;
+  float: right;
+  clear: none;
+  background: none; }
+.settings_page_topline-plugin .topline-body h1 {
+  line-height: 1.3; }
+.settings_page_topline-plugin .topline-body .tagline {
+  line-height: 1.25; }
+.settings_page_topline-plugin .topline-body .timeline {
+  width: 100%;
+  overflow: scroll;
+  margin-top: 2.5em; }
+  .settings_page_topline-plugin .topline-body .timeline img {
+    min-width: 1200px;
+    width: 100%;
+    padding-bottom: 3.5em; }
+.settings_page_topline-plugin .topline-side {
+  width: 30%;
+  float: right;
+  clear: none;
+  background: #333;
+  padding: 1em;
+  margin: 1.25em  10% 0 0; }
+  .settings_page_topline-plugin .topline-side p {
+    font-size: 1.07em;
+    font-style: italic; }
+.settings_page_topline-plugin .top-bar {
+  margin-top: 1.35em;
+  background: #333;
+  margin-bottom: 1em;
+  height: 60px; }
+  .settings_page_topline-plugin .top-bar .navbar-brand {
+    float: left;
+    padding: 0 15px;
+    font-size: 25px;
+    line-height: 20px; }
+.settings_page_topline-plugin .navbar-nav > .navbar-profile {
+  margin: 0; }
+.settings_page_topline-plugin .navbar-nav > .navbar-profile > a {
+  height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 60px; }
+.settings_page_topline-plugin .btn-primary {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, #D74B4B 0%, #BB2A2A 100%);
+  background-image: linear-gradient(to bottom, #D74B4B 0%, #BB2A2A 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd74b4b', endColorstr='#ffbb2a2a', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #B32828;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: none;
+  transform: none;
+  -webkit-transform: none;
+  -webkit-transition: none; }
+  .settings_page_topline-plugin .btn-primary:hover {
+    background-color: #BB2A2A;
+    background-position: 0 -15px;
+    border-color: #B32828; }
+.settings_page_topline-plugin .account-form {
+  padding: 10px;
+  text-align: left; }
+.settings_page_topline-plugin label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+.settings_page_topline-plugin .form-control {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  margin-bottom: 1.25em;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+.settings_page_topline-plugin .form-group {
+  position: relative;
+  margin-bottom: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+.settings_page_topline-plugin [href="options-general.php?page=topline-plugin"] {
+  background: rgba(0, 0, 0, 0.2); }
+.settings_page_topline-plugin [href="options-general.php?page=topline-plugin"].current,
+.settings_page_topline-plugin [href="options-general.php?page=topline-plugin"]:hover {
+  background: rgba(0, 0, 0, 0.45) !important;
+  color: #00a8c4 !important; }
+.settings_page_topline-plugin .nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; }
+.settings_page_topline-plugin .navbar-right {
+  float: right !important;
+  margin: 0; }
+.settings_page_topline-plugin .nav > li {
+  position: relative;
+  display: block; }
+.settings_page_topline-plugin .nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px; }
+.settings_page_topline-plugin .nav > li > a > img {
+  max-width: none;
+  vertical-align: middle; }
+.settings_page_topline-plugin .navbar-nav > li > a {
+  color: #FFF;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+.settings_page_topline-plugin .navbar-profile-avatar {
+  position: relative;
+  top: -1px;
+  width: 30px;
+  margin-right: .65em;
+  border: 2px solid #FFF;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px; }
+.settings_page_topline-plugin .open > .dropdown-menu {
+  display: block; }
+.settings_page_topline-plugin .navbar-inverse .navbar-nav > .navbar-profile > a {
+  height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 60px; }
+.settings_page_topline-plugin .navbar-profile-label {
+  display: inline;
+  font-size: 13px; }
+.settings_page_topline-plugin .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 14px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box; }
+.settings_page_topline-plugin .navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0; }
+.settings_page_topline-plugin .dropdown-menu > li {
+  margin-right: .5em;
+  margin-left: .5em; }
+.settings_page_topline-plugin .dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px; }
+.settings_page_topline-plugin .dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  background-color: #E5E5E5; }
+.settings_page_topline-plugin .navbar-profile-label {
+  display: none; }
+.settings_page_topline-plugin .navbar-nav {
+  float: left;
+  margin: 0; }
+.settings_page_topline-plugin .navbar-nav > li {
+  float: left; }
+.settings_page_topline-plugin .navbar-inverse .navbar-nav > li > a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 13px; }
+.settings_page_topline-plugin .navbar-right .dropdown-menu {
+  left: auto;
+  right: 0; }
+.settings_page_topline-plugin .navbar-nav .dropdown-menu:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #FFF;
+  position: absolute;
+  top: -7px;
+  left: 9px; }
+.settings_page_topline-plugin .navbar-right .dropdown-menu:before {
+  right: 9px;
+  left: auto; }
+.settings_page_topline-plugin .navbar-nav > li > a {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 60px;
+  padding: 1.5em;
+  vertical-align: middle; }
+.settings_page_topline-plugin .content-nav {
+  float: left !important; }
+.settings_page_topline-plugin .topline-side h3 {
+  color: whitesmoke; }
+.settings_page_topline-plugin .topline-side a {
+  color: #00A8C4; }
+.settings_page_topline-plugin .floorplan {
+  position: relative;
+  width: 20%;
+  height: 300px;
+  float: left;
+  clear: right;
+  margin: 0.3em 3.5% 3.5% 0.5%;
+  padding: 0.3em;
+  text-align: center;
+  font-weight: bold;
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  text-shadow: 0 -1px 2px whitesmoke;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+.settings_page_topline-plugin .property-desc {
+  clear: both;
+  float: left;
+  padding: 0 5em 0 0; }
+.settings_page_topline-plugin #map {
+  height: 280px;
+  width: 350px;
+  float: right;
+  position: relative;
+  border-bottom: 15px solid #333;
+  border-top: 9px solid #333;
+  box-shadow: -1px 0 9px rgba(0, 0, 0, 0.5);
+  border-right: 1px solid #666;
+  border-left: 1px solid #666; }
+.settings_page_topline-plugin .topline-well h5 {
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 0.5px 0 0 #000; }
+.settings_page_topline-plugin .city-text, .settings_page_topline-plugin .state-text, .settings_page_topline-plugin .zip-text {
+  display: block;
+  float: left;
+  margin-right: 2%; }
+  .settings_page_topline-plugin .city-text input, .settings_page_topline-plugin .state-text input, .settings_page_topline-plugin .zip-text input {
+    width: 100%; }
+.settings_page_topline-plugin .city-text {
+  width: 48%; }
+.settings_page_topline-plugin .state-text {
+  width: 18%; }
+.settings_page_topline-plugin .zip-text {
+  width: 30%;
+  margin-right: 0; }
+.settings_page_topline-plugin .form-table input {
+  width: 100%; }
+.settings_page_topline-plugin .dropdown-menu > li > a.add-credentials:hover {
+  background: #5CB85C; }
+.settings_page_topline-plugin .dropdown-menu > li > a.remove-credentials:hover {
+  background: #D74B4B; }
+.settings_page_topline-plugin h1 .topline-edit-link {
+  font-size: 0.8em; }
+.settings_page_topline-plugin .topline-edit-link, .settings_page_topline-plugin .topline-edit-link:hover, .settings_page_topline-plugin .floorplan h3 a {
+  color: #D9534F;
+  font-weight: bold;
+  text-decoration: none; }
+.settings_page_topline-plugin .topline-edit-link:hover, .settings_page_topline-plugin .floorplan h3 a:hover {
+  color: #333; }
+.settings_page_topline-plugin .floorplan .topline-edit-container {
+  position: absolute;
+  top: 0.35em;
+  width: 100%;
+  display: block; }
+.settings_page_topline-plugin .floorplan .topline-edit-link {
+  float: right;
+  margin-right: 2em;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0.2em; }
+.settings_page_topline-plugin .subview-icons {
+  font-size: 0.8em; }
+.settings_page_topline-plugin .subview-icons a {
+  color: #333; }
+.settings_page_topline-plugin .subview-icons .active {
+  color: #00A8C4; }
+.settings_page_topline-plugin .pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0; }
+.settings_page_topline-plugin .pagination > li {
+  display: inline; }
+.settings_page_topline-plugin .pagination > li > a,
+.settings_page_topline-plugin .pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #00A8C4;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd; }
+.settings_page_topline-plugin .pagination > li:first-child > a,
+.settings_page_topline-plugin .pagination > li:first-child > span {
+  margin-left: 0; }
+.settings_page_topline-plugin .pagination > li > a:hover,
+.settings_page_topline-plugin .pagination > li > span:hover,
+.settings_page_topline-plugin .pagination > li > a:focus,
+.settings_page_topline-plugin .pagination > li > span:focus {
+  color: #23527c;
+  background-color: #eee;
+  border-color: #ddd; }
+.settings_page_topline-plugin .pagination > .active > a,
+.settings_page_topline-plugin .pagination > .active > span,
+.settings_page_topline-plugin .pagination > .active > a:hover,
+.settings_page_topline-plugin .pagination > .active > span:hover,
+.settings_page_topline-plugin .pagination > .active > a:focus,
+.settings_page_topline-plugin .pagination > .active > span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #00A8C4;
+  border-color: #00A8C4; }
+.settings_page_topline-plugin .pagination > .disabled > span,
+.settings_page_topline-plugin .pagination > .disabled > span:hover,
+.settings_page_topline-plugin .pagination > .disabled > span:focus,
+.settings_page_topline-plugin .pagination > .disabled > a,
+.settings_page_topline-plugin .pagination > .disabled > a:hover,
+.settings_page_topline-plugin .pagination > .disabled > a:focus {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ddd; }
+.settings_page_topline-plugin .pagination-lg > li > a,
+.settings_page_topline-plugin .pagination-lg > li > span {
+  padding: 10px 16px;
+  font-size: 18px; }
+.settings_page_topline-plugin .pagination-sm > li > a,
+.settings_page_topline-plugin .pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px; }
+
+/* Destroyng John's SASS */
+.property-edit {
+  padding-right: 4.5em; }
+
+/*# sourceMappingURL=topline-plugin-admin.css.map */

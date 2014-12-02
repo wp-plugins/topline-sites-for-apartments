@@ -1,0 +1,29 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+.floor-plan-overview {
+  margin-bottom: 50px; }
+  .floor-plan-overview h2 {
+    margin-bottom: 20px;
+    font-size: 2em; }
+  .floor-plan-overview ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; }
+    .floor-plan-overview ul li {
+      margin: 0; }
+  .floor-plan-overview ul:not(.floor-plan-images) {
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center; }
+    .floor-plan-overview ul:not(.floor-plan-images) li {
+      margin: 0 30px 0 0;
+      display: inline-block; }
+      .floor-plan-overview ul:not(.floor-plan-images) li:last-child {
+        margin-right: 0; }
+
+/*# sourceMappingURL=topline-floorplan.css.map */
