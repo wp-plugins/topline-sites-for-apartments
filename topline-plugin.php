@@ -24,7 +24,7 @@
  * Text Domain:       topline-plugin
  * Domain Path:       /languages
  */
-if (true) {
+if (version_compare(PHP_VERSION, '5.4.0', '<')) {
 
 	add_action('admin_notices', function() {
 
@@ -33,93 +33,93 @@ if (true) {
 			</p>";
 
 	});
-	die;
 
-}
+} else {
 
-// For composer dependencies
-require 'vendor/autoload.php';
+	// For composer dependencies
+	require 'vendor/autoload.php';
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
-
-
-/**
- * The code that runs during plugin activation.
- */
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-plugin-activator.php';
-
-/**
- * The code that runs during plugin deactivation.
- */
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-plugin-deactivator.php';
-
-/** This action is documented in includes/class-topline-plugin-activator.php */
-register_activation_hook( __FILE__, array( 'Topline_Plugin_Activator', 'activate' ) );
-
-add_action('admin_init', function() {
-	
-	if (get_option('topline_activation_redirect', false)) {
-		
-		delete_option('topline_activation_redirect');
-		
-		if(!isset($_GET['activate-multi'])) {
-			wp_redirect('options-general.php?page=topline-plugin&view=welcome');
-		}
-
+	// If this file is called directly, abort.
+	if ( ! defined( 'WPINC' ) ) {
+		die;
 	}
 
-});
 
-add_action('admin_notices', function() {
+	/**
+	 * The code that runs during plugin activation.
+	 */
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-plugin-activator.php';
 
-	if (get_option('topline_install_notice', false)) {
-		$screen = get_current_screen();
-		if($screen->base != 'settings_page_topline-plugin') {
-			$welcomeUrl = admin_url('options-general.php?page=topline-plugin&view=welcome');
-	    	echo "	<p class='update-nag'>
-						You still need to configure Topline, in order for it to be installed correctly. You can <a href='$welcomeUrl'>begin setup here</a>.
-					</p>";
+	/**
+	 * The code that runs during plugin deactivation.
+	 */
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-plugin-deactivator.php';
+
+	/** This action is documented in includes/class-topline-plugin-activator.php */
+	register_activation_hook( __FILE__, array( 'Topline_Plugin_Activator', 'activate' ) );
+
+	add_action('admin_init', function() {
+		
+		if (get_option('topline_activation_redirect', false)) {
+			
+			delete_option('topline_activation_redirect');
+			
+			if(!isset($_GET['activate-multi'])) {
+				wp_redirect('options-general.php?page=topline-plugin&view=welcome');
+			}
+
 		}
+
+	});
+
+	add_action('admin_notices', function() {
+
+		if (get_option('topline_install_notice', false)) {
+			$screen = get_current_screen();
+			if($screen->base != 'settings_page_topline-plugin') {
+				$welcomeUrl = admin_url('options-general.php?page=topline-plugin&view=welcome');
+		    	echo "	<p class='update-nag'>
+							You still need to configure Topline, in order for it to be installed correctly. You can <a href='$welcomeUrl'>begin setup here</a>.
+						</p>";
+			}
+		}
+
+	});
+
+	/** This action is documented in includes/class-topline-plugin-deactivator.php */
+	register_deactivation_hook( __FILE__, array( 'Topline_Plugin_Deactivator', 'deactivate' ) );
+
+	/**
+	 * The core plugin class that is used to define internationalization,
+	 * dashboard-specific hooks, and public-facing site hooks.
+	 */
+	require_once plugin_dir_path( __FILE__ ) . 'includes/helpers.php';
+
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-converter.php';
+
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-query.php';
+
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-shortcodes.php';
+
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-plugin.php';
+
+
+
+
+	/**
+	 * Begins execution of the plugin.
+	 *
+	 * Since everything within the plugin is registered via hooks,
+	 * then kicking off the plugin from this point in the file does
+	 * not affect the page life cycle.
+	 *
+	 * @since    1.0.0
+	 */
+	function run_topline_plugin() {
+
+		$plugin = new Topline_Plugin();
+		$plugin->run();
+
 	}
-
-});
-
-/** This action is documented in includes/class-topline-plugin-deactivator.php */
-register_deactivation_hook( __FILE__, array( 'Topline_Plugin_Deactivator', 'deactivate' ) );
-
-/**
- * The core plugin class that is used to define internationalization,
- * dashboard-specific hooks, and public-facing site hooks.
- */
-require_once plugin_dir_path( __FILE__ ) . 'includes/helpers.php';
-
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-converter.php';
-
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-query.php';
-
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-shortcodes.php';
-
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-topline-plugin.php';
-
-
-
-
-/**
- * Begins execution of the plugin.
- *
- * Since everything within the plugin is registered via hooks,
- * then kicking off the plugin from this point in the file does
- * not affect the page life cycle.
- *
- * @since    1.0.0
- */
-function run_topline_plugin() {
-
-	$plugin = new Topline_Plugin();
-	$plugin->run();
-
+	run_topline_plugin();
 }
-run_topline_plugin();
