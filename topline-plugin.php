@@ -13,7 +13,7 @@
  * @package           Topline_Plugin
  *
  * @wordpress-plugin
- * Plugin Name:       Topline Sites for Apartments
+ * Plugin Name:       TopLine Sites for Apartments
  * Plugin URI:        http://30lines.com/topline
  * Description:       Extendable plugin that helps you market your apartments and rental properties.
  * Version:           1.0.0
