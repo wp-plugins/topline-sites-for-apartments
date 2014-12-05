@@ -16,7 +16,7 @@
  * Plugin Name:       TopLine Sites for Apartments
  * Plugin URI:        http://30lines.com/topline
  * Description:       Extendable plugin that helps you market your apartments and rental properties.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            30Lines
  * Author URI:        http://30lines.com/
  * License:           GPL-2.0+
@@ -29,7 +29,7 @@ if (version_compare(PHP_VERSION, '5.4.0', '<')) {
 	add_action('admin_notices', function() {
 
 	echo "	<p class='update-nag'>
-				TopLine Sites is made for WordPress installations running <strong>PHP 5.4.0</strong> or greater. You are currently running: <strong>". PHP_VERSION ."</strong>.
+				TopLine Sites for Apartments is made for WordPress installations running <strong>PHP 5.4.0</strong> or greater. You are currently running: <strong>PHP ". PHP_VERSION ."</strong>.
 			</p>";
 
 	});
