@@ -36,7 +36,7 @@ class Topline_Plugin_Deactivator {
 		$email 		=	get_bloginfo('admin_email'); 
 		$version 	=	get_bloginfo('version');
 		
-		$response = GuzzleHttp\post('http://topline.katz.ninja/topline-uninstalled', [
+		$response = GuzzleHttp\post('http://topline.30lines.com/topline-uninstalled', [
 			'body' => [
 				'site' => $site,'wpurl' => $url,'email' => $email,'version' => $version
 			]

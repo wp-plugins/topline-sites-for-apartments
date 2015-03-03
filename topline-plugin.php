@@ -16,7 +16,7 @@
  * Plugin Name:       TopLine Sites for Apartments
  * Plugin URI:        http://30lines.com/topline
  * Description:       Extendable plugin that helps you market your apartments and rental properties.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            30Lines
  * Author URI:        http://30lines.com/
  * License:           GPL-2.0+

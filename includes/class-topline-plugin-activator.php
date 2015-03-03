@@ -41,7 +41,7 @@ class Topline_Plugin_Activator {
 		$email 		=	get_bloginfo('admin_email'); 
 		$version 	=	get_bloginfo('version');
 
-		$response = GuzzleHttp\post('http://topline.katz.ninja/topline-installed', [
+		$response = GuzzleHttp\post('http://topline.30lines.com/topline-installed', [
 			'body' => [
 				'site' => $site,'wpurl' => $url,'email' => $email,'version' => $version
 			]

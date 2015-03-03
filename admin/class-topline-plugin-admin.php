@@ -62,7 +62,7 @@ class Topline_Plugin_Admin {
 
 		$feed = false;
 		if($username && $apikey) {
-			$response = GuzzleHttp\post('http://topline.katz.ninja/api/v1/' . $username, [
+			$response = GuzzleHttp\post('http://topline.30lines.com/api/v1/' . $username, [
 					'body' => [
 						'api_key' => $apikey
 					]
@@ -72,7 +72,7 @@ class Topline_Plugin_Admin {
 			$propertyID = $response['data']['properties'][0]['id'];
 
 			if(isset($propertyID)) {
-				$response = GuzzleHttp\post('http://topline.katz.ninja/api/v1/' . $username . '/property/' . $propertyID , [
+				$response = GuzzleHttp\post('http://topline.30lines.com/api/v1/' . $username . '/property/' . $propertyID , [
 						'body' => [
 							'api_key' => $apikey
 						]
@@ -194,7 +194,7 @@ class Topline_Plugin_Admin {
 		
 
 
-		$http =  GuzzleHttp\post('http://topline.katz.ninja/check-api-credentials', [
+		$http =  GuzzleHttp\post('http://topline.30lines.com/check-api-credentials', [
 			'body' => [
 				'username' => $request['username'],
 				'api_key' => $request['apikey']
