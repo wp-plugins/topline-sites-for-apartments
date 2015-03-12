@@ -1,5 +1,5 @@
 === TopLine Sites for Apartments ===
-Contributors: 30lines, ericnkatz, johnbhartley
+Contributors: 30lines, ericnkatz, johnbhartley, jesse30lines
 Tags: apartments, configurable, multifamily, floor plans, rentals
 Requires at least: 3.0.1
 Tested up to: 4.0
