@@ -1,6 +1,6 @@
 === TopLine Sites for Apartments ===
 Contributors: 30lines, ericnkatz, johnbhartley, jesse30lines
-Tags: apartments, configurable, multifamily, floor plans, rentals
+Tags: apartments, configurable, multifamily, floor plans, rentals, property management
 Requires at least: 3.0.1
 Tested up to: 4.0
 Stable tag: 1.0
