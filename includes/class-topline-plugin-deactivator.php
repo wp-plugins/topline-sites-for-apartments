@@ -28,7 +28,7 @@ class Topline_Plugin_Deactivator {
 	 * Long Description.
 	 *
 	 * @since    1.0.0
-	 */
+	 */  
 	/* public static function deactivate() {
 
 		$site 		=	get_bloginfo('name');
