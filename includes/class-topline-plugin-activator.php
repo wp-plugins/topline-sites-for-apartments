@@ -30,7 +30,7 @@ class Topline_Plugin_Activator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {
+	/* public static function activate() {
 		if(!get_option('topline_credentials')) {
 			add_option('topline_install_notice', true);
 			add_option('topline_activation_redirect', true);
@@ -46,5 +46,5 @@ class Topline_Plugin_Activator {
 				'site' => $site,'wpurl' => $url,'email' => $email,'version' => $version
 			]
 		]);
-	}
+	} */
 }

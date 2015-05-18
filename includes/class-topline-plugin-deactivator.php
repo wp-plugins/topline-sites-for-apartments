@@ -29,7 +29,7 @@ class Topline_Plugin_Deactivator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function deactivate() {
+	/* public static function deactivate() {
 
 		$site 		=	get_bloginfo('name');
 		$url 		=	get_bloginfo('wpurl'); 
@@ -41,6 +41,6 @@ class Topline_Plugin_Deactivator {
 				'site' => $site,'wpurl' => $url,'email' => $email,'version' => $version
 			]
 		]);
-	}
+	} */
 
 }
